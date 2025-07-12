@@ -12,7 +12,8 @@ $query=mysqli_query($con,$sql);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title> Registro de Técnicos</title>
+    <title> Registro de Técnicos iD</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3534/3534139.png" type="icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
