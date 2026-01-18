@@ -14,7 +14,7 @@ if (isset($_POST['register'])) {
         $dni = trim($_POST["dni"]);
         $nombres = trim($_POST["nombres"]);
         $apellidos = trim($_POST["apellidos"]);
-        $fecha_reg = date("d/m/y");
+        $fecha_reg = date("y/m/d");
         
 
         $sql= "INSERT INTO datos (cod_persona, dni, nombres, apellidos, fecha_reg) VALUES ('$cod_persona','$dni','$nombres','$apellidos','$fecha_reg')";

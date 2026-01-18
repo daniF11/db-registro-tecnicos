@@ -13,7 +13,7 @@ $query=mysqli_query($con,$sql);
 <html lang="en">
 <head>
     <title> Registro de Técnicos iD</title>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3534/3534139.png" type="icon">
+    <link rel="icon" href="https://definicion.de/wp-content/uploads/2014/02/registro-de-datos.png" type="image/x-icon" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
@@ -33,7 +33,7 @@ $query=mysqli_query($con,$sql);
                     <input type="text" class="form-control mb-3" name="nombres" placeholder="Nombres">
                     <input type="text" class="form-control mb-3" name="apellidos" placeholder="Apellidos">
                     
-                    <input type="submit" class="btn btn-primary" name="register">
+                    <input type="submit" class="btn btn-secondary" name="register">
                 </form>
             </div>
 
@@ -59,7 +59,8 @@ $query=mysqli_query($con,$sql);
                                 <th><?php  echo $row['cod_persona']?></th>
                                 <th><?php  echo $row['dni']?></th>
                                 <th><?php  echo $row['nombres']?></th>
-                                <th><?php  echo $row['apellidos']?></th>    
+                                <th><?php  echo $row['apellidos']?></th>
+                                <th><?php  echo $row['fecha_reg']?></th>     
                                 <th><a href="php/actualizar.php?id=<?php echo $row['cod_persona'] ?>" class="btn btn-info">Editar</a></th>
                                 <th><a href="php/delete.php?id=<?php echo $row['cod_persona'] ?>" class="btn btn-danger">Eliminar</a></th>                                        
                             </tr>

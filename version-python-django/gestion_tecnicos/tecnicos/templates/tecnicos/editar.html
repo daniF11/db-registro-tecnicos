@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contenedor">
+
+    <!-- FORMULARIO -->
+    <div class="formulario">
+        <h2>Editar Técnico</h2>
+
+        <form method="post" class="formulario-editar">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit">Guardar cambios</button>
+            <a href="{% url 'index' %}">Cancelar</a>
+        </form>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="imagen-editar">
+        <img src="{% static 'tecnicos/img/editar.png' %}" alt="Editar técnico">
+    </div>
+
+</div>
+{% endblock %}
+

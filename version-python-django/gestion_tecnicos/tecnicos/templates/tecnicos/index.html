@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="contenedor">
+
+    <div class="formulario">
+        <h2>Registrar Técnico</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div class="listado">
+        <h2>Lista de Técnicos</h2>
+        <table border="1">
+            <tr>
+                <th>Código</th>
+                <th>DNI</th>
+                <th>Nombres</th>
+                <th>Apellidos</th>
+                <th>Nivel</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+            {% for tecnico in tecnicos %}
+            <tr>
+                <td>{{ tecnico.codigo }}</td>
+                <td>{{ tecnico.dni }}</td>
+                <td>{{ tecnico.nombres }}</td>
+                <td>{{ tecnico.apellidos }}</td>
+                <td>{{ tecnico.nivel }}</td>
+                <td>{{ tecnico.fecha_registro|date:"d/m/Y" }}</td>
+                <td>
+                    <a class="editar" href="{% url 'editar' tecnico.id %}">Editar</a> |
+<a class="eliminar"
+   href="{% url 'eliminar' tecnico.id %}"
+   onclick="return confirm('¿Seguro que deseas eliminar este técnico?');">
+   Eliminar
+</a>
+
+
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No hay técnicos registrados</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+{% endblock %}

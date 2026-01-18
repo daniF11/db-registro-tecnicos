@@ -1,0 +1,45 @@
+{% load static %}
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestión de Técnicos</title>
+    <link rel="stylesheet" href="{% static 'tecnicos/css/estilos.css' %}" />
+  </head>
+  <body>
+    <div class="encabezado">
+      <h1>Sistema de Gestión de Técnicos</h1>
+      <img
+        src="{% static 'tecnicos/img/logoAzul.png' %}"
+        alt="Logo"
+        class="img-logo"
+      />
+    </div>
+    <hr />
+
+    {% if user.is_authenticated %}
+    
+      {% if user.is_authenticated %}
+    <p>
+        Hola, {{ user.username }}
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit" class="logout-btn">Salir</button>
+        </form>
+    </p>
+{% endif %}
+
+    </p>
+    {% else %}
+    <a href="{% url 'login' %}">Iniciar sesión</a>
+    {% endif %} 
+    
+    {% if messages %}
+    <div class="mensajes">
+      {% for message in messages %}
+      <div class="mensaje {{ message.tags }}">{{ message }}</div>
+      {% endfor %}
+    </div>
+    {% endif %} {% block content %}{% endblock %}
+  </body>
+</html>

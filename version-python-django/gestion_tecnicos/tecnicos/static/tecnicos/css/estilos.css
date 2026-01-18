@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-top: 0;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    display: flex;
+   
+    gap: 30px;
+    align-items: center;
+}
+
+/*ENCABEZADO*/
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* FORMULARIO */
+.formulario {
+    width: 500;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.formulario form p {
+    margin-bottom: 10px;
+}
+
+.formulario input,
+.formulario select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+}
+
+/* FORMULARIO EDITAR */
+.formulario-editar {
+    width: 420px; /* 👈 fijo, no se encoge */
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.formulario-editar form p {
+    margin-bottom: 10px;
+}
+
+.formulario-editar input,
+.formulario-editar select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+}
+
+/* LISTADO */
+.listado {
+    width: 65%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #222;
+    color: #fff;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* BOTONES */
+button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 4px;
+    background: #222;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #000;
+}
+
+/* LINKS DE ACCIÓN */
+a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a.editar {
+    color: #007bff;
+}
+
+a.eliminar {
+    color: #d11a2a;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* IMAGEN EDITAR */
+.imagen-editar {
+    flex: 1; /* ocupa el espacio restante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-editar img {
+    max-width: 400px;
+    width: 100%;
+    opacity: 0.85;
+}
+
+
+/* LOGO */
+.img-logo {
+    height: 60px;
+    width: 100PX;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+/*MENSAJES DE EXITO*/
+.mensajes {
+    margin-bottom: 20px;
+}
+
+.mensaje {
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.mensaje.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
