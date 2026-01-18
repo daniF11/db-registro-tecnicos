@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Listado de Técnicos</h2>
+
+<table>
+<thead>
+<tr>
+    <th>Nombres</th>
+    <th>Apellidos</th>
+    <th>Nivel</th>
+    <th>Código</th>
+    
+</tr>
+</thead>
+
+<tbody>
+{% for tecnico in tecnicos %}
+<tr>
+    <td>{{ tecnico.nombres }}</td>
+    <td>{{ tecnico.apellidos }}</td>
+    <td>{{ tecnico.nivel }}</td>
+    <td>{{ tecnico.codigo }}</td>
+    
+</tr>
+{% endfor %}
+</tbody>
+</table>
+{% endblock %}

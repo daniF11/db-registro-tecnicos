@@ -17,6 +17,11 @@
     </div>
     <hr />
 
+    {% if user.is_superuser %}
+    <a href="{% url 'index' %}">Panel Admin</a>
+{% endif %}
+
+
     {% if user.is_authenticated %}
     
       {% if user.is_authenticated %}
